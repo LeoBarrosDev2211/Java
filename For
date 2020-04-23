@@ -1,0 +1,51 @@
+1)
+package br.com.aulafor1;
+import java.util.Scanner;
+
+/**
+ * @author Leonardo Barros
+ * leo221191@gmail.com
+ * Programa para gerar tabuada de um número a partir de inserção do usuário
+ * Program to generate a multiplication table for any number that the user inserted
+ */
+public class AulaFor1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int num = 0, num2 = 0;
+        
+        System.out.println("Insira um numero: ");
+        num = sc.nextInt();
+        System.out.println("Tabuada do " + num + ":");
+        for (int i = 0; i <= 10; i++){
+            num2 = num * i;
+            System.out.println(num + " * " + i + " = " + num2);
+        }
+    }
+}
+
+2) 
+package br.com.aulafor2;
+import java.util.Scanner;
+
+/**
+ * @author Leonardo Barros
+ * leo221191@gmail.com
+ * Programa para calcular o fatorial de um número a partir de inserção do usuário
+ * Program to calculate the factorial of any number that the user inserted
+ */
+ 
+public class AulaFor2 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = 0, fat = 1;
+        
+        System.out.println("Insira um numero positivo");
+        num = sc.nextInt();
+        
+        for (int i = 1; i <= num; i++){
+            fat*=i;
+        }
+       System.out.println ("!" + num + " = " + fat);
+    }    
+}
