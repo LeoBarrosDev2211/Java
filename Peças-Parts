@@ -1,0 +1,7 @@
+package revisao;
+public class Pecas {
+    String nome;
+    Carros marcas;
+    float valorpecas;
+    String des;
+}
