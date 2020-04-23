@@ -1,0 +1,45 @@
+package revisao;
+public class Carros {
+    private String marcas;
+    byte portas;
+    double valor;
+    String acessorios;
+
+    //encapsular é fazer Getters e Setters
+    
+    String getMarcas() {
+        return marcas;
+    }
+
+    void setMarcas(String marcas) {
+        this.marcas = marcas;
+    }
+
+    byte getPortas() {
+        return portas;
+    }
+
+    void setPortas(byte portas) {
+        this.portas = portas;
+    }
+
+    double getValor() {
+        return valor;
+    }
+
+    void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    String getAcessorios() {
+        return acessorios;
+    }
+
+    void setAcessorios(String acessorios) {
+        this.acessorios = acessorios;
+    }
+
+    
+    
+    
+}
