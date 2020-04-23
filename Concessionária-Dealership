@@ -1,0 +1,62 @@
+/*
+ * @author Leonardo Barros
+ * leo221191@gmail.com
+ * Programa de cadastro de veículos numa concessionária
+ * Vehicle registration program at a dealership
+*/
+
+package revisao;
+import java.util.Scanner;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+public class Revisao {
+    public static void main(String[] args) {
+        char sn;
+        float desconto = 0;
+        double valorfinal = 0;
+        Scanner sc = new Scanner(System.in);
+        
+        Pecas pecas = new Pecas();
+        Carros carros = new Carros();
+        Conta conta = new Conta();
+        
+        pecas.marcas = carros;
+        
+        System.out.println("CADASTRO");
+        System.out.println("**************");
+        System.out.println();
+        System.out.println("Digite  a marca do carros: ");
+        carros.setMarcas(sc.next());
+        System.out.println("Digite o acessório: ");
+        carros.acessorios = sc.next();
+        System.out.println("Digite o número de portas: ");
+        carros.portas = sc.nextByte();
+        System.out.println("____________________");
+        System.out.println("Digite o valor do carro: ");
+        carros.valor = sc.nextDouble();
+        System.out.println("O carro possui desconto? (S/N)");
+        sn = sc.next().charAt(0);
+        //pega o primeiro caracter que o individuo digitar (o da posição 0)
+        if (sn == 's' || sn == 'S'){
+            System.out.println("Digite o valor do desconto: ");
+            desconto = sc.nextFloat();
+            valorfinal = conta.desconto(carros.valor, desconto);
+        }
+        System.out.println("____________________");
+        System.out.println();
+        System.out.println("Carro: " + carros.getMarcas());
+        System.out.println("Acessorios: " + carros.acessorios);
+        System.out.println("Número de portas: " + carros.portas);
+        System.out.println("____________________");
+        System.out.println();
+        System.out.println("Valor do carro: " + carros.valor);
+        System.out.println("Valor do carro com " + desconto + " % de desconto: " + valorfinal);
+    
+        JFrame frame = new JFrame();
+        //Criar o JOptionPane por showMessageDialog
+        JOptionPane.showMessageDialog(frame, "Um " + carros.getMarcas() + ", com " + carros.acessorios + " de " + carros.portas +
+        " portas \n\n de " + carros.valor+ " \n\n por " + valorfinal, "PROMOÇÃO", JOptionPane.INFORMATION_MESSAGE);   
+    }
+}
+
+
