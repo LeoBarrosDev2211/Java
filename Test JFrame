@@ -1,0 +1,55 @@
+/*
+ * @author Leonardo Barros
+ * leo221191@gmail.com	
+ * Teste de JButton, JFrame, JLabel e JTextField
+ * Testing de JButton, JFrame, JLabel and JTextField
+*/
+ 
+package estudafrm;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class EstudaFRM {
+    public static void main(String[] args) {
+        
+        //criando o Frame
+        JFrame f = new JFrame();
+        f.setSize(300,100);
+        f.setTitle("Cadastro de categorias");
+        f.setLocation(150,200);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //criando Painel
+        JPanel p1 = new JPanel();
+        p1.setLayout(null); //gerenciador de Layout
+        
+        //criando os componentes
+        //Label
+        JLabel meuLabel = new JLabel("Codigo");
+        meuLabel.setBounds(10, 10, 60, 20);
+        
+        //Campo de Texto 
+        JTextField meuCampoTexto = new JTextField();
+        meuCampoTexto.setBounds(80,10,60,20);
+        
+        //Botão
+        JButton meuBotao = new JButton("Botão");
+        meuBotao.setBounds(150,10,100,20);
+        
+        //colocando os componentes dentro do Painel
+        p1.add(meuLabel);
+        p1.add(meuCampoTexto);
+        p1.add(meuBotao);
+        
+        //colocando o painel no frame
+        f.add(p1);
+        f.setVisible(true);
+        }
+    
+    
+}
